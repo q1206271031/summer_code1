@@ -1,0 +1,15 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int i;
+	int a[10] = { 2, 4, 1, 5, 7, 9, 10, 3, 6, 8 }, Max = a[0];
+	for (i = 0; i < 10; i++)
+	{
+		if (Max < a[i])
+			Max = a[i];
+	}
+	printf("最大值为 %d\n", Max);
+	system("pause");
+	return 0;
+}

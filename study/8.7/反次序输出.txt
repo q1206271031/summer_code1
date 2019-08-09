@@ -1,0 +1,17 @@
+#include<stdio.h>
+void reverse_string(char * string)
+{
+	if(*string == '\0')
+		printf("%c",*string);
+	else
+	{
+		reverse_string(++string);
+		printf("%c",*(--string));
+	}
+}
+int main()
+{
+	char s[]="abcdef";
+	reverse_string1(s);
+	return 0;
+}

@@ -1,0 +1,42 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+//递归
+/*int Fei(int x)
+{
+	if (x <= 2)
+	{
+		return 1;
+	}
+	return Fei(x - 1) + Fei(x - 2);
+}
+int main()
+{
+	int x = 0;
+	scanf("%d",&x);
+	int ret = Fei(x);
+	printf("%d",ret);
+	return 0;
+}*/
+//非递归
+int Fei(int n)
+{
+	int a = 1;
+	int b = 1;
+	int c = 0;
+	while (n > 2)
+	{
+		c = a + b;
+		b = a;
+		b = c;
+		n--;
+	}
+	return c;
+}
+int main()
+{
+	int n = 0;
+	printf("请输入");
+	scanf("%d", &n);
+	printf("%d", Fei(n));
+	return 0;
+}

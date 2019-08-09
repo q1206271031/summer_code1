@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+//递归
+/*
+int mul(int n)
+{
+	if (n == 1)
+	{
+		return n;
+	}
+	return n*mul(n - 1);
+}
+int main()
+{
+	int n = 5;
+	int ret = mul(n);
+	printf("%d\n",ret);
+	return 0;
+}
+*/
+//非递归 
+int mul(int n)
+{
+	int ret = 1;
+	int i;
+	for (i = 1; i <= n; i++)
+	{
+		ret *= i;
+	}
+	return ret;
+}
+int main()
+{
+	int n = 5;
+	int ret = mul(n);
+	printf("%d\n", ret);
+	return 0;
+}
+ 

@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+int Ci(int n,int k)
+{
+	if (k == 0)
+	{
+		return 0;
+	}
+	else if (k == 1)
+	{
+		return n;
+	}
+	return n * Ci(n, k - 1);
+}
+int main()
+{
+	int n = 3; 
+	int k = 2;
+	int ret = 0;		
+	ret = Ci(n,k);
+	printf("%d\n", ret);
+}

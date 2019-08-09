@@ -1,0 +1,14 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int num1 = 10, num2 = 20;
+	num1 = num1 + num2;
+	num2 = num1 - num2;
+	num1 = num1 - num2;
+	printf("输入两个数");
+	scanf("&num1,&num2");
+	printf("%d %d", num1, num2);
+	system("pause");
+	return 0;
+}

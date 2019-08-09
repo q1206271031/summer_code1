@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+//递归
+/*
+int strlen(char *x)
+{
+	if (*x == '\0')
+	{
+		return 0;
+	}
+	return 1+strlen(x+1);
+}
+int main()
+{
+	char ret[] = "hello";
+	printf("%d\n", strlen(ret));
+	return 0;
+}
+*/
+//非递归
+int Strlen1(char *x){
+	int ret = 0;
+	if (*x == '\0')
+		return 0;
+	while (*x != '\0'){
+		ret++;
+		x++;
+	}
+	return ret;
+}
+int main()
+{
+	char ret[] = "hello";
+	printf("%d\n", strlen(ret));
+	return 0;
+}

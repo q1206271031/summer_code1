@@ -1,0 +1,17 @@
+#define _CRT_SECURE_NO_DEPRECATE  //屏蔽不安全警告
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int i, j;
+	int year;
+	for (i = 1000; i <= 2000; i++)
+	{
+		scanf("%d", &year);
+		if (year % 4 == 0)
+			printf("闰年");
+		else
+			printf("不是闰年");
+	}
+	system("pause");
+	return 0;
+}

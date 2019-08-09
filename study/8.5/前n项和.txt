@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+	int i;
+	int a = 0;
+	int ret = 0; 
+	int sum = 0;
+	scanf("%d", &a);
+	for (i = 0; i < 5; i++)
+	{
+		ret = ret * 10 + a;        
+		sum += ret;
+	}
+	printf("%d", sum);
+
+}

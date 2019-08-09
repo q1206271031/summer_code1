@@ -1,0 +1,16 @@
+﻿#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a = 5;
+	int b = 15;
+	int temp = 0;
+	printf("初始值： a=%d, b=%d\n", a, b);
+
+	temp = a;//temp=5
+	a = b;//a=15
+	b = temp;//b=5
+	printf("交换后： a=%d, b=%d\n", a, b);
+	system("pause");
+	return 0;
+}

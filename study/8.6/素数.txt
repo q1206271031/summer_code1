@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+
+int Prime(int x)
+{
+	int i = 0;
+	for (i = 2; i < x; i++)
+	{
+		if (x % i == 0);
+		{
+			return 1;
+		}
+		return 0;
+	}
+}
+int main()
+{
+	int x = 7;
+	int ret = Prime(x);
+	if (ret == 1)
+	{
+		printf("%d 是素数", x);
+	}
+	else
+		printf("%d 不是素数", x);
+	
+}

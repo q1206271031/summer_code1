@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<math.h>
+int Mul(int a, int b)
+{
+	int sum = 1;
+	sum = a * b;
+	return sum;
+}
+int main()
+{
+	int i,j = 1;
+	int n = 0;
+	int sum = 0;
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= n; j++)
+		{
+			int ret = Mul(i, j);
+			printf("%d * %d = %d ", i, j, ret);
+		}
+		printf("\n");
+	}
+	return 0;
+}

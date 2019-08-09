@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<stdlib.h>
+int num(int x,int y){
+	while (1)
+	{
+		if (x > y)
+		{
+			x -= y;
+		}
+		else if (x < y)
+		{
+			y -= x;
+		}
+		else
+		{
+			return x;
+		}
+	}
+}
+int main(){
+	int a,b = 0;
+	int div = 0;
+	printf("请输入a与b的数值：");
+	scanf("%d %d", &a, &b);
+	div = num(a, b);
+	printf("Max = %d", div);
+	system("pause");
+	return 0;
+}
