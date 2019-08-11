@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+
+void play()
+{
+	char killer;
+	for (killer = 'A'; killer <= 'D'; killer++)
+	{
+		if (((killer != 'A') + (killer == 'C') + (killer == 'D') + (killer != 'D')) == 3) 
+		{
+			printf("%c是凶手\n", killer);
+			break;
+		}
+	}
+}
+int main()
+{
+	play();
+	return 0;
+}

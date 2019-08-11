@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<string.h>
+
+
+int every(int num)
+{
+	while (num)
+	{
+		printf("%d\n", num%10);
+		num /= 10;
+	}
+	return num;
+}
+int main()
+{
+	int sum = 0;
+	scanf("%d", &sum);
+	every(sum);
+	return 0;
+
+}
