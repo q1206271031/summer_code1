@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+
+int add(int x, int y)
+{
+	int tmp = 0;
+	while (y != 0)
+	{
+		tmp = x^y;
+		y = x&y;
+		x = tmp;
+		y = y << 1;
+		
+
+	}
+	return x;
+}
+int avg(int x,int y)
+{
+	return add(((x^y) >> 1), x&y);
+}
+int main()
+{ 
+	int x = 0, y = 0;
+	scanf("%d%d", &x, &y);
+	printf("%d\n", avg(x, y));
+	return 0;
+
+}

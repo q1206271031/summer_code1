@@ -1,0 +1,55 @@
+
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+#include<stdlib.h>
+
+
+void reverse_word(char *left,char *right)
+{
+	char tmp = 0;
+	assert (left != NULL);
+	assert(right != NULL);
+	while (left < right)
+	{
+		
+		tmp = *left;
+		*left = *right;
+		*right = tmp;
+		left++;
+		right--;
+	}
+	
+}
+void reverse(char arr[])
+{
+	char *start = arr;
+	char *end = NULL;
+	int len = strlen(arr);
+	char *ret = arr;
+	reverse_word(arr, arr + len-1);
+	while (*arr)
+	{
+		start = arr;
+		while ((*arr != ' ')&& (*arr != '\0'))
+		{
+			arr++;			//加了strlen长度
+		}
+		end = arr - 1;			
+		reverse_word(start,end);
+		if (*arr == ' ')
+		{
+			arr++;
+		}
+		
+	}
+	printf("%s\n", ret);
+}
+
+int main()
+{
+	char str[] = "student a am I";
+	reverse(str);
+	return 0;
+}
