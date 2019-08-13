@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+
+void spin(char ch[], int k)
+{
+	for (int i = 0; i < k; i++)		//翻转几次
+	{
+		char temp = ch[0];
+		for (int j = 0; j < strlen(ch) - 1; j++)	//翻转字符
+		{
+			ch[j] = ch[j + 1];
+		}
+		ch[strlen(ch) - 1] = temp;
+	}
+}
+
+int main()
+{
+	char ch[] = "ABCD";
+	int k = 0;   
+	scanf("%d", &k);
+	spin(ch, k);
+	printf("%s\n", ch);
+	system("pause");
+	return 0;
+}
