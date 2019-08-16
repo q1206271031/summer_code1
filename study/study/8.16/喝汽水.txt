@@ -1,0 +1,34 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<assert.h>
+#include<string.h>
+#include<stdlib.h>
+
+int play(int money){
+	int num = money;
+	int empty = num;
+	while (empty >= 2)
+	{
+		num += empty / 2;
+		if (empty % 2 == 0)
+		{
+			empty /= 2;
+		}
+		else
+		{
+			empty = empty / 2 + 1;
+		}
+
+	}
+	return num;
+
+}
+int main(){
+	int money = 0;
+	int ret = 0;
+	scanf("%d", &money);
+	ret = play(money);
+	printf("%d", ret);
+	return 0;
+
+}

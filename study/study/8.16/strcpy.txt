@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_DEPRECATE 
+#include<stdio.h>
+#include<assert.h>
+#include<string.h>
+#include<stdlib.h>
+
+char my_strcpy(char* p1, char* p2){
+
+	assert(p1 != NULL);
+	assert(p2 != NULL);
+	char* ret = p1;			//记录p1的首地址，便于之后打印
+	while (*p2)
+	{
+		*p1++ = *p2++;
+	}
+	*p1 = *p2;
+	return ret;
+
+}
+int main(){
+	char p1[20] = { 0 };
+	char p2[] = "hello bit";
+	my_strcpy(p1, p2);
+	printf("%s\n", p2);
+	return 0;
+
+}
