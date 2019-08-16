@@ -1,0 +1,32 @@
+结构体：
+		数组：聚合类型，整体初始化只有一次在定义时
+		
+		
+		void *memset( void *dest, int c, size_t count );
+		
+		
+		
+		
+		strcpy字符串拷贝	eg:char name[10]	strcpy(stu.name,"xxxx")
+		
+		eg:
+			struct A
+			{
+				int a;
+				int b;
+			};
+
+			struct B
+			{
+				int c;
+				struct A AA;
+				struct A *pa;
+			};
+
+			int main()
+			{
+				struct B stuB;
+				stuB.AA.a;
+				stuB.AA.b;
+				stuB.pa->a;
+				stuB.pa->b;
