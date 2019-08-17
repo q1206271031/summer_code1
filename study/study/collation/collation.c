@@ -92,6 +92,99 @@ void d5p1()
 }
 
 
+
+//void init(int arr[], int len){
+//
+//	int i = 0;
+//	int sum = 0;
+//	for (i = 0; i < len; i++)
+//	{
+//		scanf("%d", &sum);
+//		arr[i] = sum;
+//	}
+//}
+//void empty(int arr[], int len){
+//
+//	int i = 0;
+//	for (i = 0; i < len; i++)
+//	{
+//		arr[i] = 0;
+//	}
+//}
+//void reverse(int arr[], int len){
+//
+//	int i = 0;
+//	int arr1[5];
+//	for (i = 0; i < len; i++)
+//	{
+//		arr1[i] = arr[i];
+//	}
+//	for (i = 0; i < len; i++)
+//	{
+//		arr[i] = arr1[5 - i - 1];
+//	}
+//}
+//int main(){
+//
+//	int i = 0;
+//	int arr[5] = { 0 };
+//	int len = sizeof(arr) / sizeof(arr[0]);
+//	printf("初始化");
+//	init(arr, len);
+//	printf("逆置");
+//	reverse(arr, len);
+//	for (i = 0; i < len; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	putchar('\n');
+//	printf("清空");
+//	empty(arr, len);
+//	for (i = 0; i < len; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//
+//}
+
+
+
+//int digit(int n){
+//
+//	int m = 0;
+//	int sum = 0;
+//	if (n != 0)
+//	{
+//		m = n % 10;
+//		n = n / 10;
+//		digit(n );
+//		sum = m + digit(n);
+//	}
+//	return sum;
+//}
+//int main(){
+//
+//	int n;
+//	scanf("%d", &n);
+//	printf("和为%d", digit(n));
+//	return 0;
+//}
+
+
+int mul(int n){
+	if (n == 1)
+	{
+		return 1;
+	}
+	return n*mul(n -1);
+}
+int main(){
+	
+	int n = 5;
+}
+
+
 int main()
 {
 	//d3p1();
