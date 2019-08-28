@@ -72,6 +72,7 @@ void ShowContact(pContact pc){
 			pc->data[i].age,
 			pc->data[i].tel,
 			pc->data[i].addr);
+		putchar('\n');
 
 	}
 	putchar('\n');
