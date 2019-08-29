@@ -53,6 +53,7 @@ void test(){
 			break;
 		case EMPTY:
 			EmptyContact(&con);
+			break;
 		case EXIT:
 			SaveContact(&con);
 			DestroyContact(&con);
@@ -60,7 +61,6 @@ void test(){
 			break;
 		default:
 			printf("Ï¹¸ã\n");
-			break;
 		}
 	} while (input);
 

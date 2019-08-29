@@ -225,8 +225,8 @@ void SortContact(pContact pc){
 void SaveContact(pContact pc){
 
 	int i = 0;
-	FILE* pf = fopen("F:/比特科技/C语言课件V3/进阶/contact.dat", "w");
-	if (pf = NULL){
+	FILE* pf = fopen("F:/比特科技/C语言课件V3/进阶/contact.dat", "wb");
+	if (pf == NULL){
 		perror("open file for write");
 		exit(EXIT_FAILURE);
 	}
